@@ -15,6 +15,8 @@ import { nameValidator } from '../helpers/nameValidator'
 export default function RegisterScreen({ navigation }) {
   const [name, setName] = useState({ value: '', error: '' })
   const [email, setEmail] = useState({ value: '', error: '' })
+  const [vehicle, setVehicle] = useState({ value: '', error: '' })
+  const [contact, setContact] = useState({ value: '', error: '' })
   const [password, setPassword] = useState({ value: '', error: '' })
 
   const onSignUpPressed = () => {
@@ -57,6 +59,30 @@ export default function RegisterScreen({ navigation }) {
         autoCompleteType="email"
         textContentType="emailAddress"
         keyboardType="email-address"
+      />
+      <TextInput
+        label="Vehicle Number"
+        returnKeyType="next"
+        value={vehicle.value}
+        onChangeText={(text) => setVehicle({ value: text, error: '' })}
+        error={!!vehicle.error}
+        errorText={vehicle.error}
+        autoCapitalize="none"
+        autoCompleteType="Vehicle Number"
+        textContentType="vehicle-number"
+        keyboardType="vehicle-number"
+      />
+      <TextInput
+        label="Contact Number"
+        returnKeyType="next"
+        value={contact.value}
+        onChangeText={(text) => setContact({ value: text, error: '' })}
+        error={!!contact.error}
+        errorText={contact.error}
+        autoCapitalize="none"
+        autoCompleteType="contact-number"
+        textContentType="contact-number"  
+        keyboardType="contact-number"
       />
       <TextInput
         label="Password"
