@@ -9,7 +9,7 @@ export default function Dashboard({ navigation }) {
   return (
     <Background>
       {/* <Logo /> */}
-      <Header>CarParking </Header>
+      <Header>Parking Space </Header>
       
 
 
