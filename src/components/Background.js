@@ -1,14 +1,10 @@
 import React from 'react'
 import { ImageBackground, StyleSheet, KeyboardAvoidingView } from 'react-native'
 import { theme } from '../core/theme'
-
+const image = { uri: "https://img.freepik.com/free-vector/cerulean-blue-curve-frame-template_53876-99029.jpg?w=1060&t=st=1679318094~exp=1679318694~hmac=aecd06737981c70ec54e035fec4c2aece03be85fc9e06bbb431a90800078f22c" };
 export default function Background({ children }) {
   return (
-    <ImageBackground
-      source={require('../assets/background_dot.png')}
-      resizeMode="repeat"
-      style={styles.background}
-    >
+    <ImageBackground source={image} resizeMode='cover' style={styles.container}>
       <KeyboardAvoidingView style={styles.container} behavior="padding">
         {children}
       </KeyboardAvoidingView>
