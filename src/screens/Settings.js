@@ -4,33 +4,18 @@ import Logo from '../components/Logo'
 import Header from '../components/Header'
 import Paragraph from '../components/Paragraph'
 import Button from '../components/Button'
-export default function Dashboard({ navigation }) {
+import BackButton from '../components/BackButton'
+export default function Settings({ navigation }) {
   return (
     <Background>
       {/* <Logo /> */}
-      <Header>Parking Space </Header>
+      <BackButton goBack={navigation.goBack} />
+      <Header>Settings </Header>
       
       
-      <Button
-        mode="outlined"
-        onPress={() => navigation.navigate('TotalSlot')}
-      >
-        Slot
-      </Button>
-      <Button
-        mode="outlined"
-        onPress={() => navigation.navigate('Settings')}
-      >
-        Settings
-      </Button>
-      <Button
-        mode="outlined"
-        onPress={() => navigation.navigate('Dist')}
-      >
-        Distance
-      </Button>
+      
 
-    
+
 
       <Button
         mode="outlined"
